@@ -1,0 +1,5 @@
+nixos-rebuild switch 
+
+nix-collect-garbage --delete-old
+
+export NIXPKGS_ALLOW_UNFREE=1

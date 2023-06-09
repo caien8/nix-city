@@ -6,7 +6,7 @@
   users.users.caien = {
     isNormalUser = true;
     description = "caien";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd"];
     packages = with pkgs; [];
   };
 
@@ -29,7 +29,13 @@
      polybar
      xfce.thunar
      feh
+     # virtualization
+     qemu
+     qemu_kvm
+     libvirt
+     virt-manager
   ];
-
-
+  # VIRTUALIZATION
+  virtualisation.libvirtd.enable = true;
+  programs.dconf.enable = true;
 }

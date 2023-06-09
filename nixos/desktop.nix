@@ -19,7 +19,7 @@ services = {
       # Display manager
       displayManager = {
           sddm.enable = true;
-	  defaultSession = "none+bspwm";
+	       defaultSession = "none+bspwm";
       };
       windowManager = {
           bspwm.enable = true;
